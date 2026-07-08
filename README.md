@@ -10,3 +10,9 @@
 동아출판   : F12(F5) -> Network -> s001.jpg or 001.jpg의 경로 복사 -> 프로그램 가동(경로 필요)  
 # 프로그램 가동 불필요
 미래엔    : F12(F5) -> Console -> PDFViewerApplication.url 타이핑
+YBM : fetch('/rest/textbooks/'책 아이디'/mChapter')
+  .then(response => response.json())
+  .then(data => {
+    console.log("불러온 교과서 데이터:", data);
+  })
+  .catch(error => console.error("호출 실패:", error));
